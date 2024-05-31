@@ -1,6 +1,5 @@
 package com.lockedme;
 
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,8 +34,12 @@ public class LockedMeApp {
     }
 
     private static void showMainMenu() {
+    	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    	System.out.println("******************************");
         System.out.println("\nWelcome to LockedMe.com");
         System.out.println("Developer: Mpho Vincent Makgwe");
+    	System.out.println("\n******************************");
+    	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("\nMain Menu:");
         System.out.println("1. Retrieve all files in ascending order");
         System.out.println("2. File operations (Add, Delete, Search)");

@@ -11,6 +11,17 @@ public class FileManager {
 
     public FileManager(String rootDirectory) {
         this.rootDirectory = rootDirectory;
+        createRootDirectory();
+    }
+
+    private void createRootDirectory() {
+        File directory = new File(rootDirectory);
+        if (!directory.exists()) {
+            boolean created = directory.mkdir();
+            if (!created) {
+                System.out.println("Failed to create root directory. Please check the path and permissions.");
+            }
+        }
     }
 
     public List<String> getAllFiles() {
@@ -32,7 +43,7 @@ public class FileManager {
         try {
             return file.createNewFile();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
             return false;
         }
     }
